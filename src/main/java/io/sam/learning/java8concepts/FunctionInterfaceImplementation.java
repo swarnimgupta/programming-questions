@@ -29,6 +29,7 @@ public class FunctionInterfaceImplementation {
                 .filter (i -> i > 0)
                 .sorted ( )
                 .summaryStatistics ( );
+        
         System.out.println (intSummaryStatistics.getCount ( ));
         System.out.println (intSummaryStatistics.getAverage ( ));
         System.out.println (intSummaryStatistics.getMax ( ));
