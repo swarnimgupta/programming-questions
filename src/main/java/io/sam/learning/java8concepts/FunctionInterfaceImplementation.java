@@ -11,23 +11,24 @@ interface PrintLambdaFunction {
 public class FunctionInterfaceImplementation {
 
     public static void main(String[] args) {
-
         PrintLambdaFunction lambdaFunction = (message) -> {
             System.out.println ("Working with lambda expression " + message);
         };
 
         lambdaFunction.printMessage ("Testing");
         Random random = new Random ( );
-        IntSummaryStatistics intSummaryStatistics = random.ints ( )
-                .limit (5)
-                .filter (i -> i > 0)
-                .sorted ( )
-                .summaryStatistics ( );
+
         random.ints ( )
                 .limit (5)
                 .filter (i -> i > 0)
                 .sorted ( )
                 .forEach (System.out::println);
+
+        IntSummaryStatistics intSummaryStatistics = random.ints ( )
+                .limit (5)
+                .filter (i -> i > 0)
+                .sorted ( )
+                .summaryStatistics ( );
         System.out.println (intSummaryStatistics.getCount ( ));
         System.out.println (intSummaryStatistics.getAverage ( ));
         System.out.println (intSummaryStatistics.getMax ( ));
